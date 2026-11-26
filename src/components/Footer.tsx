@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Phone, Mail, MapPin, ExternalLink } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const handleLinkClick = (url: string) => {
@@ -164,12 +165,14 @@ const Footer = () => {
                 </button>
               </li>
               <li>
-                <button 
-                  onClick={() => handleLinkClick('https://salescentri.com/trust/security-privacy')}
+                <a
+                  href="https://salescentri.com/trust/security-privacy"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-secondary-foreground/80 hover:text-primary transition-colors"
                 >
                   Security & Privacy
-                </button>
+                </a>
               </li>
               <li>
                 <button 
@@ -217,12 +220,12 @@ const Footer = () => {
               © 2024 Erika Henson Solutions. All rights reserved.
             </div>
             <div className="flex items-center gap-6 text-sm">
-              <button 
-                onClick={() => handleLinkClick('https://salescentri.com/trust/security-privacy')}
+              <Link
+                to="/privacy-policy"
                 className="text-secondary-foreground/80 hover:text-primary transition-colors"
               >
                 Privacy Policy
-              </button>
+              </Link>
               <button 
                 onClick={() => handleLinkClick('https://salescentri.com/trust/compliance-certifications')}
                 className="text-secondary-foreground/80 hover:text-primary transition-colors"
